@@ -1,6 +1,8 @@
 # Nextcloud
 
-- use wonderfall/nextcloud:10.0 & mysql
+- based on wonderfall/nextcloud:10.0 & mysql
+
+develop/nextcloud	10.0	6aeaa1562b36	11 days ago	221.2 MB
 
 ## init Nextcloud rbd image
 
@@ -9,7 +11,7 @@
 - `rbd create nextcloud-data --size 2048`
 - `rbd create nextcloud-db --size 2048`
 - `docker build -t develop/nextcloud:10.0 .`
-- PV's yaml ceph mon IP
+- Change PV's yaml ceph mon IP
 
 ## Create Nextcloud
 

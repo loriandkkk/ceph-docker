@@ -23,6 +23,14 @@ spec:
       name: nextcloud
       labels:
         name: nextcloud
+      annotations:
+        pod.beta.kubernetes.io/init-containers: '[
+            {
+                "name": "check-db-running",
+                "image": "cdxvirt/ceph-daemon:latest",
+                "command": ["curl","nextcloud-db:3306"]
+            }
+        ]'
     spec:
       nodeSelector:
         ceph_mon: "true"
