@@ -8,7 +8,7 @@ develop/nextcloud	10.0	6aeaa1562b36	11 days ago	221.2 MB
 
 - `rbd create nextcloud-app --size 2048`
 - `rbd create nextcloud-config --size 2048`
-- `rbd create nextcloud-data --size 2048`
+- `rbd create nextcloud-data --size 204800`
 - `rbd create nextcloud-db --size 2048`
 - `docker build -t develop/nextcloud:10.0 .`
 - Change PV's yaml ceph mon IP
